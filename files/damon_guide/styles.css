@@ -7411,13 +7411,15 @@
   width:158px;
   height:35px;
   background:inherit;
-  background-color:rgba(36, 36, 40, 1);
-  border:none;
-  border-radius:10px;
-  -moz-box-shadow:none;
-  -webkit-box-shadow:none;
-  box-shadow:none;
-  color:#FFFFFF;
+  background-color:rgba(255, 255, 255, 1);
+  box-sizing:border-box;
+  border-width:1px;
+  border-style:solid;
+  border-color:rgba(9, 11, 55, 1);
+  border-radius:24px;
+  -moz-box-shadow:1px 1px 0px rgba(9, 11, 55, 1);
+  -webkit-box-shadow:1px 1px 0px rgba(9, 11, 55, 1);
+  box-shadow:1px 1px 0px rgba(9, 11, 55, 1);
 }
 #u256 {
   border-width:0px;
@@ -7427,12 +7429,11 @@
   width:158px;
   height:35px;
   display:flex;
-  color:#FFFFFF;
 }
 #u256 .text {
   position:absolute;
   align-self:center;
-  padding:2px 2px 2px 2px;
+  padding:0px 0px 0px 0px;
   box-sizing:border-box;
   width:100%;
 }
@@ -7604,16 +7605,16 @@
   position:absolute;
   left:0px;
   top:0px;
-  width:19px;
-  height:19px;
+  width:16px;
+  height:16px;
 }
 #u263 {
   border-width:0px;
   position:absolute;
-  left:86px;
-  top:98px;
-  width:19px;
-  height:19px;
+  left:88px;
+  top:100px;
+  width:16px;
+  height:16px;
   display:flex;
 }
 #u263 .text {
@@ -12445,13 +12446,15 @@ body.b {  background-color:rgba(224, 223, 255, 1);
   width:158px;
   height:35px;
   background:inherit;
-  background-color:rgba(36, 36, 40, 1);
-  border:none;
-  border-radius:10px;
-  -moz-box-shadow:none;
-  -webkit-box-shadow:none;
-  box-shadow:none;
-  color:#FFFFFF;
+  background-color:rgba(255, 255, 255, 1);
+  box-sizing:border-box;
+  border-width:1px;
+  border-style:solid;
+  border-color:rgba(9, 11, 55, 1);
+  border-radius:24px;
+  -moz-box-shadow:1px 1px 0px rgba(9, 11, 55, 1);
+  -webkit-box-shadow:1px 1px 0px rgba(9, 11, 55, 1);
+  box-shadow:1px 1px 0px rgba(9, 11, 55, 1);
 }
 #u256.b {
   left:394px;
@@ -12461,7 +12464,7 @@ body.b {  background-color:rgba(224, 223, 255, 1);
 }
 #u256 .text.b {
   align-self:center;
-  padding:2px 2px 2px 2px;
+  padding:0px 0px 0px 0px;
 }
 #u257.b {
   top:2286px;
@@ -12534,12 +12537,12 @@ body.b {  background-color:rgba(224, 223, 255, 1);
   padding:2px 2px 2px 2px;
 }
 #u263.b {
-  top:79px;
+  top:81px;
 }
 #u263_img.b {
 }
 #u263.b {
-  top:79px;
+  top:81px;
 }
 #u263_text.b {
 }
