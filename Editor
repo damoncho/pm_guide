@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Markdown Editor</title>
+  <style>
+    /* CSS 스타일을 적용합니다. */
+    body {
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    .markdown-editor {
+      display: flex;
+      height: 100vh;
+    }
+
+    .markdown-editor__input {
+      flex: 1;
+      padding: 20px;
+      resize: none;
+      border: none;
+      font-size: 16px;
+    }
+
+    .markdown-editor__preview {
+      flex: 1;
+      padding: 20px;
+      background-color: #f6f8fa;
+      overflow: auto;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 0;
+    }
+
+    a {
+      color: #0077ff;
+    }
+
+    code {
+      background-color: #f6f8fa;
+      border-radius: 3px;
+      padding: 2px 4px;
+    }
+
+    pre {
+      background-color: #f6f8fa;
+      border-radius: 3px;
+      padding: 10px;
+      overflow: auto;
+    }
+
+    pre code {
+      background-color: transparent;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="markdown-editor">
+    <textarea class="markdown-editor__input" placeholder="Type Markdown"></textarea>
+    <div class="markdown-editor__preview"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    const input = document.querySelector('.markdown-editor__input');
+    const preview = document.querySelector('.markdown-editor__preview');
+
+    // 입력 내용이 변경될 때마다 HTML로 변환하여 미리보기 창에 출력합니다.
+    input.addEventListener('input', () => {
+      const markdown = input.value;
+      const html = marked(markdown, {
+        // 마크다운 문법을 HTML 태그로 변환합니다.
+        breaks: true,
+        gfm: true,
+        headerIds: false,
+        mangle: false,
+        sanitize: false,
+        smartLists: true,
+        smartypants: true
+      });
+      preview.innerHTML = html;
+    });
+  </script>
+</body>
+</html>
