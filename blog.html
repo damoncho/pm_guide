@@ -2,8 +2,6 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kinolights</title>
     <style>
         /* Reset some default styles */
         body, h1, h2, p, ul, li {
@@ -14,22 +12,27 @@
         /* Basic layout styles */
         body {
             font-family: Arial, sans-serif;
-            font-size: 16px; /* 글자 크기 설정 */
-            font-weight: 400; /* 글자 두께 설정 */
-            color: #333D4B; /* 글자 색상 설정 */
-            line-height: 1.6; /* 줄 간격 설정 */
+            font-size: 16px;
+            font-weight: 400;
+            color: #333D4B;
+            line-height: 1.6;
             background-color: #101322;
         }
 
         h2 {
-            line-height: 1.5; /* 행간 설정 */
+            line-height: 1.5;
         }
 
         article {
             background-color: #fff;
             padding: 2rem;
-            border-bottom: 1px solid #F2F2F2; /* 회색 가로선 추가 */
-            /* margin-bottom: 1rem; */
+            border-bottom: 1px solid #F2F2F2;
+        }
+
+        a {
+            color: #0F60B8;
+            text-decoration: underline;
+            font-weight: bold;
         }
 
 
@@ -42,12 +45,6 @@
             border-radius: 5px;
         }
 
-        .title {
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 1.6;
-        }
-
         .title-image {
            width: 100%;
            height: auto;
@@ -55,26 +52,37 @@
            margin: 0;
        }
 
-       .highlight-text {
+       .title {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.6;
+    }
+
+    .namecard {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.6;
+    }
+
+    .feedback {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.6;
+        background-color: #E9ECEF;
+    }
+
+    .highlight-text {
         background-color: rgba(63, 213, 153, 0.21);
         padding: 2px 4px;
-        border-radius: 3px;
+        border-radius: 5px;
     }
 
-
-    a {
-        color: #0F60B8; /* 링크 텍스트 색상 */
-        text-decoration: underline; /* 마우스 오버 시 밑줄 표시 */
-        font-weight: bold; /* 볼드 스타일 추가 */
-    }
-
-    /* Button styles */
     .btn {
         display: inline-block;
         text-decoration: none;
         font-size: 16px;
         padding: 12px 24px;
-        border-radius: 5px;
+        border-radius: 3px;
         transition: background-color 0.3s;
         margin-top: 16px;
         margin-bottom: 16px;
@@ -89,75 +97,84 @@
         text-align: center;
     }
 
-    /* Center alignment class */
     .center-align {
         text-align: center;
     }
 
-    /* Left alignment class */
     .left-align {
         text-align: left;
     }
 
     .container {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
     }   
+
 </style>
 </head>
 <body>
     <div class="container">
-    <main>
-        <img src="https://img.stibee.com/46560_1680146330.jpg" alt="Title Image" class="title-image">
-        <article class="title">
-            <p class="center-align"> <span class="highlight-text">전도연의 파격적인 변신으로<br> 화제가 된 <u><strong><길복순></strong></u></span>
-            </p><br/>
-            <p class="center-align">미리 보고 온 기자는 어땠을까??<br>
-            볼까 말까 고민 말고, 아래 글로 확인해 보자!</p>
-        </article>
-        <article>
-            <h2>🪓<br>영화계 스타일리스트 감독이<br> 전도연에게 입힌 옷</h2>
-            <img src="https://img.stibee.com/46560_1680146700.jpg" alt="이미지 설명">
-            <p>“선배님은 이미 구겨져 있어서 빳빳하게 펴고 싶다”</p><br/>
+        <main>
+            <img src="https://img.stibee.com/46560_1680146330.jpg" alt="Title Image" class="title-image">
+            <article class="title">
+                <p class="center-align"> <span class="highlight-text">전도연의 파격적인 변신으로<br> 화제가 된 <u><strong><길복순></strong></u></span>
+                </p><br/>
+                <p class="center-align">미리 보고 온 기자는 어땠을까??<br>
+                볼까 말까 고민 말고, 아래 글로 확인해 보자!</p>
+            </article>
+            <article>
+                <h2>🪓<br>영화계 스타일리스트 감독이<br> 전도연에게 입힌 옷</h2>
+                <img src="https://img.stibee.com/46560_1680146700.jpg" alt="이미지 설명">
+                <p>“선배님은 이미 구겨져 있어서 빳빳하게 펴고 싶다”</p><br/>
 
-            <p>감독 <a href="https://example.com">변성현</a>이 배우 <a href="https://example.com">설경구</a>에게 한 말이다. ‘박하사탕’ ‘오아시스’ ‘공공의 적’ ‘실미도’ ‘해운대’ 등에서 보여준 설경구의 이미지는 동네 옆집 아저씨 또는 똘끼가 느껴지는 꼴통에 가까웠다. 이런 이미지가 고착화 된 중년 배우에게 변성현은 포마드에서 쓰리피스라는 멋을 스타일링해 주었다. <strong>‘불한당’ 이후 설경구는 슈트와 제복이 잘 어울리는 미중년으로 연기 인생 2막을 보내고 있다.</strong></p><br/>
+                <p>감독 <a href="https://m.kinolights.com/person/67006/filmography">변성현</a>이 배우 <a href="https://m.kinolights.com/person/163/filmography">설경구</a>에게 한 말이다. ‘박하사탕’ ‘오아시스’ ‘공공의 적’ ‘실미도’ ‘해운대’ 등에서 보여준 설경구의 이미지는 동네 옆집 아저씨 또는 똘끼가 느껴지는 꼴통에 가까웠다. 이런 이미지가 고착화 된 중년 배우에게 변성현은 포마드에서 쓰리피스라는 멋을 스타일링해 주었다. <strong>‘불한당’ 이후 설경구는 슈트와 제복이 잘 어울리는 미중년으로 연기 인생 2막을 보내고 있다.</strong></p><br/>
 
-            <p>이 최고의 스타일리스트라 할 수 있는 변성현이 택한 다음 타겟은 전도연이다. 칸의 여왕으로 불리는 <strong>대한민국 대표 여배우에게 그가 제안한 스타일링은 킬러다.</strong> ‘길복순’은 <a href="https://example.com">전도연</a>을 메인으로 내세운 범죄 액션 느와르다. 청부살인업계의 전설적인 킬러 길복순이 회사와 재계약을 앞두고 문제를 겪으면서 피할 수 없는 대결에 휘말리는 과정을 그렸다.</p>
-            <img src="https://img.stibee.com/46560_1680146738.jpg" alt="이미지 설명">
-            <p>전도연의 오랜 팬이라는 변성현은 새로운 매력을 담아내고자 <strong>살인은 쉽고 학부모는 어려운 킬러</strong>를 준비했다. <strong>‘길(Kill)복순’</strong>이라는 이름처럼 살인에 있어서는 최고를 자부하지만 사춘기 딸 재영의 마음은 어떻게 잡아야 좋을지 어려움을 겪는다. 직장과 가정에서 180도 다른 상황에 처하는 복순의 모습은 그 갭차이로 재미를 준다.전도연 특유의 애교 섞인 콧소리로 버무린 액션 또한 포인트다.</p><br/>
+                <p>이 최고의 스타일리스트라 할 수 있는 변성현이 택한 다음 타겟은 전도연이다. 칸의 여왕으로 불리는 <strong>대한민국 대표 여배우에게 그가 제안한 스타일링은 킬러다.</strong> ‘길복순’은 <a href="https://m.kinolights.com/person/1580/filmography">전도연</a>을 메인으로 내세운 범죄 액션 느와르다. 청부살인업계의 전설적인 킬러 길복순이 회사와 재계약을 앞두고 문제를 겪으면서 피할 수 없는 대결에 휘말리는 과정을 그렸다.</p>
+                <img src="https://img.stibee.com/46560_1680146738.jpg" alt="이미지 설명">
+                <p>전도연의 오랜 팬이라는 변성현은 새로운 매력을 담아내고자 <strong>살인은 쉽고 학부모는 어려운 킬러</strong>를 준비했다. <strong>‘길(Kill)복순’</strong>이라는 이름처럼 살인에 있어서는 최고를 자부하지만 사춘기 딸 재영의 마음은 어떻게 잡아야 좋을지 어려움을 겪는다. 직장과 가정에서 180도 다른 상황에 처하는 복순의 모습은 그 갭차이로 재미를 준다.전도연 특유의 애교 섞인 콧소리로 버무린 액션 또한 포인트다.</p><br/>
 
-            <p>도입부 특별 출연한 황정민과의 1대 1 액션 장면을 비롯해 스파링 장면, 킬러들과 일대다수의 혈전장면 등은 <strong>스타일리시한 영상미에 전도연 특유의 간드러진 목소리로 강자의 여유까지</strong> 담아낸다. 20년도 더 된 영화 <a href="https://example.com">‘피도 눈물도 없이’</a>의 수진을 기억하는 이들이라면 이때의 매력에 완숙미가 더해진 복순의 캐릭터에 반할 것이다.</p><br/>
+                <p>도입부 특별 출연한 황정민과의 1대 1 액션 장면을 비롯해 스파링 장면, 킬러들과 일대다수의 혈전장면 등은 <strong>스타일리시한 영상미에 전도연 특유의 간드러진 목소리로 강자의 여유까지</strong> 담아낸다. 20년도 더 된 영화 <a href="https://m.kinolights.com/title/1988">‘피도 눈물도 없이’</a>의 수진을 기억하는 이들이라면 이때의 매력에 완숙미가 더해진 복순의 캐릭터에 반할 것이다.</p><br/>
 
-            <p>그만큼 변성현은 완벽한 재단으로 전도연의 핏을 살리고자 하는 시도를 선보인다.</p>
-        </article>
-
-        <article>
-            <h2>🪓<br>매력적인 캐릭터 열전</h2>
-            <img src="https://img.stibee.com/46560_1680146956.jpg" alt="이미지 설명">
-            <p>변성현의 페르소나 설경구는 차민규 역으로 극에 힘을 더했다. M.K ent의 대표인 그는 복순을 킬러로 길러낸 스승이자 보스다. 위압적으로 등장할 때마다 울리는 호랑이 울음소리처럼 <strong>냉정하고 두려운 존재이지만 복순에게는 예외다.</strong> <a href="https://example.com">‘역도산’</a>에서 보여줬듯 신체적인 강인함에 슈트를 장착하며 세련된 카리스마까지 장착한 설경구는 사약 로맨스까지 시도하며 한 단계 도약한다. <strong>순정마초로 변신하며 다시 한 번 지천명 아이돌의 매력을 선사한다.</strong></p><br/>
-
-            <p>‘길복순’의 캐릭터 열전은 <a href="https://example.com">구교환</a>과 <a href="https://example.com">이솜</a>까지 이어진다. 길복순의 동료 킬러 한희성 역을 맡은 구교환은 그간 상업영화에서는 보여주지 못했던 색으로 무장했다. 바로 <strong>사랑에 있어서는 구차하고 질척이는 찌질남</strong>이다. 희성은 구교환이 다양성 영화계에서 주목받았던 본연의 장점을 지니고 있다. 때문에 그의 오랜 팬이라면 반가우면서도 남몰래 키득거릴 수 있는 순간을 경험할 것이다.</p>
-            <img src="https://img.stibee.com/46560_1680146784.jpg" alt="이미지 설명">
-
-
-            <p>이솜은 배우로 본인을 각인시킨 ‘마담 뺑덕’을 떠올리게 만드는 민희 역을 맡았다. 민규의 여동생으로 M.K ent의 이사로 일하고 있다. 유독 <strong>복순에게만 관대한 민규에게 불만을 품으며 극의 갈등을 유발하는 인물</strong>이다. 발칙하고도 앙큼한 모습으로 이솜을 대중에게 각인시켰던 덕이를 떠올리게 만든다. 전도연과 설경구의 에너지에 밀리지 않는 모습으로 극적인 재미를 극대화 시킨다.</p><br/>
-
-            <p>‘소년심판’과 ‘약한영웅’을 통해 <strong>OTT 대세배우로 떠오른</strong> <a href="https://example.com">이연</a>은 영지 역을 맡아 다시 한 번 개성 강한 연기를 보여준다. <strong>유망주 킬러</strong>로 실력에 있어서 승부욕을 지니고 있지만 우상인 복순 앞에서는 순한 양이 되는 갭모에를 보여준다. 참고로 이연은 <strong>‘일타 스캔들’에서 전도연의 아역</strong>을 연기한 바 있다.</p>
-        </article>
-        <article>
-            <h2>🪓<br>새로운 시도, 결과는 어떨까
-            </h2>
-            <img src="https://img.stibee.com/46560_1680146804.jpg" alt="이미지 설명">
-            <p>길복순’은 박훈정 감독의 <a href="https://example.com">‘마녀’</a>를 보았을 때와 비슷한 충격을 선사한다. <strong>만화 같은 질감을 지닌 신선한 장르적인 시도를 스타일리시한 연출로 세련되게 담아냈다.</strong> 배우에 딱 맞춘 캐릭터를 부여한 것에 더해 이들 사이의 관계를 유기적으로 조합했다. 범죄 느와르에 중점을 둔 비정한 세계관을 설정하면서, 순정과 의리를 지닌 캐릭터들을 적절히 배치해 감정적 격화를 이끌어 내는 힘도 보여준다.</p><br/>
-
-            <p>무엇보다 <strong>드라마로 제작하자는 넷플릭스의 제안에도 전도연 설경구와 영화를 찍고 싶어 고집을 고수한 변성현 감독의 찐팬심</strong>이 돋보인다. 20년 넘게 충무로에서 사랑받아 온 여배우의 새로운 얼굴을 발견하는 데 성공했다. 손도끼를 든 길복순의 모습부터 파격 그 자체다.‘일타 스캔들’을 통해 흥행부도수표라는 오명을 벗어낸 전도연이 ‘길복순’을 통해 이 흐름을 이어갈 수 있을지 궁금하다.</p><br/>
-            <div class="btn-container">
-                <a href="#" class="btn btn-blue"><길복순> 더 많은 리뷰 보러가기 👉</a>
-                </div>
+                <p>그만큼 변성현은 완벽한 재단으로 전도연의 핏을 살리고자 하는 시도를 선보인다.</p>
             </article>
 
-        </main>
-         </div>
+            <article>
+                <h2>🪓<br>매력적인 캐릭터 열전</h2>
+                <img src="https://img.stibee.com/46560_1680146956.jpg" alt="이미지 설명">
+                <p>변성현의 페르소나 설경구는 차민규 역으로 극에 힘을 더했다. M.K ent의 대표인 그는 복순을 킬러로 길러낸 스승이자 보스다. 위압적으로 등장할 때마다 울리는 호랑이 울음소리처럼 <strong>냉정하고 두려운 존재이지만 복순에게는 예외다.</strong> <a href="https://m.kinolights.com/title/5587">‘역도산’</a>에서 보여줬듯 신체적인 강인함에 슈트를 장착하며 세련된 카리스마까지 장착한 설경구는 사약 로맨스까지 시도하며 한 단계 도약한다. <strong>순정마초로 변신하며 다시 한 번 지천명 아이돌의 매력을 선사한다.</strong></p><br/>
+
+                <p>‘길복순’의 캐릭터 열전은 <a href="https://m.kinolights.com/person/6189/filmography">구교환</a>과 <a href="https://m.kinolights.com/person/4345/filmography">이솜</a>까지 이어진다. 길복순의 동료 킬러 한희성 역을 맡은 구교환은 그간 상업영화에서는 보여주지 못했던 색으로 무장했다. 바로 <strong>사랑에 있어서는 구차하고 질척이는 찌질남</strong>이다. 희성은 구교환이 다양성 영화계에서 주목받았던 본연의 장점을 지니고 있다. 때문에 그의 오랜 팬이라면 반가우면서도 남몰래 키득거릴 수 있는 순간을 경험할 것이다.</p>
+                <img src="https://img.stibee.com/46560_1680146784.jpg" alt="이미지 설명">
+
+                <p>이솜은 배우로 본인을 각인시킨 ‘마담 뺑덕’을 떠올리게 만드는 민희 역을 맡았다. 민규의 여동생으로 M.K ent의 이사로 일하고 있다. 유독 <strong>복순에게만 관대한 민규에게 불만을 품으며 극의 갈등을 유발하는 인물</strong>이다. 발칙하고도 앙큼한 모습으로 이솜을 대중에게 각인시켰던 덕이를 떠올리게 만든다. 전도연과 설경구의 에너지에 밀리지 않는 모습으로 극적인 재미를 극대화 시킨다.</p><br/>
+
+                <p>‘소년심판’과 ‘약한영웅’을 통해 <strong>OTT 대세배우로 떠오른</strong> <a href="https://m.kinolights.com/person/102111/filmography">이연</a>은 영지 역을 맡아 다시 한 번 개성 강한 연기를 보여준다. <strong>유망주 킬러</strong>로 실력에 있어서 승부욕을 지니고 있지만 우상인 복순 앞에서는 순한 양이 되는 갭모에를 보여준다. 참고로 이연은 <strong>‘일타 스캔들’에서 전도연의 아역</strong>을 연기한 바 있다.</p>
+            </article>
+            <article>
+                <h2>🪓<br>새로운 시도, 결과는 어떨까
+                </h2>
+                <img src="https://img.stibee.com/46560_1680146804.jpg" alt="이미지 설명">
+                <p>길복순’은 박훈정 감독의 <a href="https://m.kinolights.com/title/64758">‘마녀’</a>를 보았을 때와 비슷한 충격을 선사한다. <strong>만화 같은 질감을 지닌 신선한 장르적인 시도를 스타일리시한 연출로 세련되게 담아냈다.</strong> 배우에 딱 맞춘 캐릭터를 부여한 것에 더해 이들 사이의 관계를 유기적으로 조합했다. 범죄 느와르에 중점을 둔 비정한 세계관을 설정하면서, 순정과 의리를 지닌 캐릭터들을 적절히 배치해 감정적 격화를 이끌어 내는 힘도 보여준다.</p><br/>
+                <p>무엇보다 <strong>드라마로 제작하자는 넷플릭스의 제안에도 전도연 설경구와 영화를 찍고 싶어 고집을 고수한 변성현 감독의 찐팬심</strong>이 돋보인다. 20년 넘게 충무로에서 사랑받아 온 여배우의 새로운 얼굴을 발견하는 데 성공했다. 손도끼를 든 길복순의 모습부터 파격 그 자체다.‘일타 스캔들’을 통해 흥행부도수표라는 오명을 벗어낸 전도연이 ‘길복순’을 통해 이 흐름을 이어갈 수 있을지 궁금하다.</p><br/>
+                <div class="btn-container">
+                    <a href="https://m.kinolights.com/title/102333" class="btn btn-blue"><길복순> 더 많은 리뷰 보러가기 👉</a>
+                    </div>
+                </article>
+                <article class="namecard">
+                    <p class="center-align"> 이 콘텐츠는 <a href="https://post.naver.com/viewer/postView.naver?volumeNo=35702930&memberNo=43999716&navigationType=push">김준모 기자</a>의 기사를 이용해 제작되었습니다.</p><br/>
+                    <p> 🗞️ <a href="https://m.post.naver.com/my/series/detail.naver?seriesNo=666486&memberNo=43999716&prevVolumeNo=35680003">기사 더보기</a></p>
+                    <p> 👈 <a href="https://m.kinolights.com/article">목록으로 돌아가기</a></p>
+                </article>
+                <article class="feedback">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXh54vyHfFAcSC0opiYFppNGWBnh1Y-dUw3LU-Fqn-gGIdXA/viewform"><img src="https://img.stibee.com/46560_1644463319.png" alt="이미지 설명"></a>
+                    <p class="center-align">👆</p>
+                    <p class="center-align" style="font-size: 14px;"><strong><em>신호등을 눌러서</em></strong></p>
+                    <p class="center-align" style="font-size: 14px;"><strong><em>피드백을 남겨주세요!</em></strong></p><br>
+                    <p class="center-align" style="font-size: 12px;">이 콘텐츠를 보고 작품이 더 궁금해지셨나요?</p>
+                    <p class="center-align" style="font-size: 12px;">여러분의 솔직한 평가를 기다립니다!</p>
+                </article>
+            </main>
+        </div>
     </body>
     </html>
