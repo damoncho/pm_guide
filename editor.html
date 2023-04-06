@@ -30,6 +30,16 @@
       overflow: auto;
     }
 
+    .markdown-editor__icon {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-right: 5px;
+      background-image: url(markdown-icon.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
     h1, h2, h3, h4, h5, h6 {
       margin-top: 0;
     }
@@ -59,7 +69,10 @@
 </head>
 <body>
   <div class="markdown-editor">
-    <textarea class="markdown-editor__input" placeholder="Type Markdown"></textarea>
+    <div>
+      <span class="markdown-editor__icon"></span>
+      <textarea class="markdown-editor__input" placeholder="Type Markdown"></textarea>
+    </div>
     <div class="markdown-editor__preview"></div>
   </div>
 
