@@ -60,16 +60,18 @@
 <body>
   <div class="markdown-editor">
     <textarea class="markdown-editor__input" placeholder="Type Markdown"></textarea>
+    <button class="markdown-editor__preview-button">Preview</button>
     <div class="markdown-editor__preview"></div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
     const input = document.querySelector('.markdown-editor__input');
+    const previewButton = document.querySelector('.markdown-editor__preview-button');
     const preview = document.querySelector('.markdown-editor__preview');
 
-    // 입력 내용이 변경될 때마다 HTML로 변환하여 미리보기 창에 출력합니다.
-    input.addEventListener('input', () => {
+    // 버튼을 클릭할 때마다 입력 내용을 HTML로 변환하여 미리보기 창에 출력합니다.
+    previewButton.addEventListener('click', () => {
       const markdown = input.value;
       const html = marked(markdown, {
         // 마크다운 문법을 HTML 태그로 변환합니다.
@@ -95,25 +97,4 @@
           font-size: 24px;
           margin-top: 40px;
           margin-bottom: 16px;
-          font-weight: bold;
-        }
-
-        .markdown-editor__preview h2 {
-          font-size: 20px;
-          margin-top: 32px;
-          margin-bottom: 16px;
-          font-weight: bold;
-        }
-
-        .markdown-editor__preview h3 {
-          font-size: 18px;
-          margin-top: 28px;
-          margin-bottom: 16px;
-          font-weight: bold;
-        }
-
-        .markdown-editor__preview h4 {
-          font-size: 16px;
-          margin-top: 24px;
-          margin-bottom: 16px;
-          font-weight: bold
+          font-weight
