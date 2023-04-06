@@ -35,9 +35,17 @@
       width: 24px;
       height: 24px;
       margin-right: 5px;
-      background-image: url(markdown-icon.png);
-      background-size: contain;
-      background-repeat: no-repeat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 1;
+      text-align: center;
+      text-transform: none;
+      letter-spacing: normal;
+      word-spacing: normal;
+      font-family: 'FontAwesome';
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -70,13 +78,14 @@
 <body>
   <div class="markdown-editor">
     <div>
-      <span class="markdown-editor__icon"></span>
+      <i class="markdown-editor__icon">M</i>
       <textarea class="markdown-editor__input" placeholder="Type Markdown"></textarea>
     </div>
     <div class="markdown-editor__preview"></div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://kit.fontawesome.com/xxxxxxxxxx.js" crossorigin="anonymous"></script>
   <script>
     const input = document.querySelector('.markdown-editor__input');
     const preview = document.querySelector('.markdown-editor__preview');
