@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Markdown to HTML</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header, footer {
+        background-color: #333;
+        color: #fff;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      main {
+        display: flex;
+        flex: 1;
+      }
+
+      .markdown-editor {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      form {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      textarea {
+        flex: 1;
+        resize: none;
+        padding: 1rem;
+        border: none;
+        width: 100%;
+      }
+
+      button {
+        align-self: center;
+        margin: 0;
+        padding: 1rem;
+        font-size: 1rem;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056B3;
+      }
+
+      #html-output {
+        flex: 1;
+        padding: 1rem;
+        border-left: 1px solid #ccc;
+        background-color: #f8f9fa;
+        overflow-y: auto;
+      }
+
+      /* 아래에 스타일 코드를 추가합니다. */
+
+      #html-output body, #html-output h1, #html-output h2, #html-output p, #html-output ul, #html-output li {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Basic layout styles */
+      #html-output body {
+        font-family: Arial, sans-serif;
+        font-size: 50px;
+        font-weight: 400;
+        color: #333D4B;
+        background-color: #101322;
+      }
+
+      #html-output h2 {
+        line-height: 1.5;
+      }
+
+      #html-output p {
+        line-height: 1.8;
+      }
+
+      #html-output p:empty {
+      margin: 0;
+      height: 1.5em; /* 높이 조절 */
+      }
+
+      #html-output hr {
+        height: 1px; /* 선의 높이를 변경합니다. */
+        background-color: #F2F2F2; /* 선의 색상을 변경합니다. */
+        border: none; /* 기본 border 스타일을 제거합니다. */
+        margin: 50px 0; /* 선 주변의 여백을 변경합니다. */
+      }
+
+      #html-output article {
+        background-color: #fff;
+        padding: 2rem;
+        border-bottom: 1px solid #F2F2F2;
+      }
+
+      #html-output a {
+        color: #0F60B8;
+        text-decoration: underline;
+        font-weight: bold;
+      }
+
+    #html-output img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 16px;
+      margin-bottom: 16px;
+      border-radius: 16px;
+    }
+
+    #html-output .title-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      margin-top: 0px;
+      margin-bottom: -10px;
+      border-radius: 0px;
+    }
+
+    #html-output .title {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    #html-output .namecard {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    #html-output .feedback {
+      font-size: 14
+
+    /* 다른 스타일 코드들 */
+  </style>
+</head>
+<body>
+  <header>
+    <!-- 헤더를 구현합니다. -->
+    <!-- ... -->
+  </header>
+  <main>
+    <div class="markdown-editor">
+      <!-- Markdown 입력 폼을 구현합니다. -->
+      <form>
+        <button type="submit">Convert</button>
+        <button id="download-html" type="button">Download HTML</button>
+        <textarea id="markdown-input" placeholder="Enter your Markdown"></textarea>
+      </form>
+    </div>
+    <!-- 변환된 HTML을 출력할 영역을 구현합니다. -->
+    <div id="html-output"></div>
+  </main>
+  <footer>
+    <!-- 푸터를 구현합니다. -->
+    <!-- ... -->
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
+  <script>
+    const md = window.markdownit({
+      html: true,
+      breaks: true,
+      linkify: true,
+      typographer: true
+    });
+    const form = document.querySelector('form');
+    const markdownInput = document.getElementById('markdown-input');
+    const htmlOutput = document.getElementById('html-output');
+    const markdownText = '이것은 첫 번째 줄입니다.\n이것은 두 번째 줄입니다.';
+    const htmlText = md.render(markdownText);
+    console.log(htmlText);
+    const textarea = document.querySelector('textarea');
+
+    textarea.addEventListener('keydown', event => {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        const start = textarea.selectionStart;
+        const end = textarea.selectionEnd;
+        const value = textarea.value;
+        textarea.value = value.substring(0, start) + '\n' + value.substring(end);
+        textarea.selectionStart = textarea.selectionEnd = start + 1;
+      }
+    });
+
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+
+      // 입력된 Markdown을 HTML로 변환합니다.
+      const html = md.render(markdownInput.value);
+
+      // 변환된 HTML을 출력합니다.
+      htmlOutput.innerHTML = html;
+    });
+
+
+const downloadButton = document.getElementById('download-html');
+downloadButton.addEventListener('click', async () => {
+  // 현재 HTML 코드를 다운로드합니다.
+  const html = htmlOutput.innerHTML;
+  const blob = new Blob([html], { type: 'text/html' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'preview.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+});
+
+  </script>
+</body>
+</html>

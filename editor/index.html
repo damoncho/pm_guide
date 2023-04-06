@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Markdown to HTML</title>
+    <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <div class="markdown-editor">
+        <!-- Markdown 입력 폼을 구현합니다. -->
+        <form>
+          <button type="submit">Convert</button>
+          <button id="download-html" type="button">Download HTML</button>
+          <textarea id="markdown-input" placeholder="Enter your Markdown"></textarea>
+        </form>
+      </div>
+      <!-- 변환된 HTML을 출력할 영역을 구현합니다. -->
+      <div id="html-output"></div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
+    <!-- JavaScript 파일 연결 -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
