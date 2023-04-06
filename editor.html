@@ -30,24 +30,6 @@
       overflow: auto;
     }
 
-    .markdown-editor__icon {
-      display: inline-block;
-      width: 24px;
-      height: 24px;
-      margin-right: 5px;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 24px;
-      line-height: 1;
-      text-align: center;
-      text-transform: none;
-      letter-spacing: normal;
-      word-spacing: normal;
-      font-family: 'FontAwesome';
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
     h1, h2, h3, h4, h5, h6 {
       margin-top: 0;
     }
@@ -77,25 +59,61 @@
 </head>
 <body>
   <div class="markdown-editor">
-    <div>
-      <i class="markdown-editor__icon">M</i>
-      <textarea class="markdown-editor__input" placeholder="Type Markdown"></textarea>
-    </div>
+    <textarea class="markdown-editor__input" placeholder="Type Markdown"></textarea>
     <div class="markdown-editor__preview"></div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="https://kit.fontawesome.com/xxxxxxxxxx.js" crossorigin="anonymous"></script>
   <script>
     const input = document.querySelector('.markdown-editor__input');
     const preview = document.querySelector('.markdown-editor__preview');
 
     // 입력 내용이 변경될 때마다 HTML로 변환하여 미리보기 창에 출력합니다.
-    function updatePreview() {
+    input.addEventListener('input', () => {
       const markdown = input.value;
       const html = marked(markdown, {
         // 마크다운 문법을 HTML 태그로 변환합니다.
         breaks: true,
         gfm: true,
         headerIds: false,
-       
+        mangle: false,
+        sanitize: false,
+        smartLists: true,
+        smartypants: true
+      });
+      preview.innerHTML = html;
+
+      // 변환된 HTML 코드에 CSS 스타일을 적용합니다.
+      const style = getComputedStyle(document.body);
+      const css = `
+        body {
+          ${style.cssText}
+        }
+
+        /* 마크다운 출력 요소에 CSS 클래스를 추가하여 스타일을 지정합니다. */
+        .markdown-editor__preview h1 {
+          font-size: 24px;
+          margin-top: 40px;
+          margin-bottom: 16px;
+          font-weight: bold;
+        }
+
+        .markdown-editor__preview h2 {
+          font-size: 20px;
+          margin-top: 32px;
+          margin-bottom: 16px;
+          font-weight: bold;
+        }
+
+        .markdown-editor__preview h3 {
+          font-size: 18px;
+          margin-top: 28px;
+          margin-bottom: 16px;
+          font-weight: bold;
+        }
+
+        .markdown-editor__preview h4 {
+          font-size: 16px;
+          margin-top: 24px;
+          margin-bottom: 16px;
+          font-weight: bold
