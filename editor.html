@@ -91,20 +91,11 @@
     const preview = document.querySelector('.markdown-editor__preview');
 
     // 입력 내용이 변경될 때마다 HTML로 변환하여 미리보기 창에 출력합니다.
-    input.addEventListener('input', () => {
+    function updatePreview() {
       const markdown = input.value;
       const html = marked(markdown, {
         // 마크다운 문법을 HTML 태그로 변환합니다.
         breaks: true,
         gfm: true,
         headerIds: false,
-        mangle: false,
-        sanitize: false,
-        smartLists: true,
-        smartypants: true
-      });
-      preview.innerHTML = html;
-    });
-  </script>
-</body>
-</html>
+       
