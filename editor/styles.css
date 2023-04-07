@@ -43,21 +43,6 @@ textarea {
   width: 100%;
 }
 
-button {
-  align-self: center;
-  margin: 0;
-  padding: 1rem;
-  font-size: 1rem;
-  background-color: #007BFF;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056B3;
-}
-
 #html-output {
   flex: 1;
   padding: 1rem;
