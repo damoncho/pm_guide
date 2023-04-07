@@ -11,19 +11,19 @@ const htmlOutput = document.getElementById('html-output');
 const textarea = document.querySelector('textarea');
 
 textarea.addEventListener('keydown', event => {
-  if (event.key === '\\') {
+  if (event.key === '\\' && event.ctrlKey) {
     event.preventDefault();
     const start = textarea.selectionStart;
     const end = textarea.selectionEnd;
     const value = textarea.value;
-    textarea.value = value.substring(0, start) + '\n' + value.substring(end);
+    textarea.value = value.substring(0, start) + '\\' + value.substring(end);
     textarea.selectionStart = textarea.selectionEnd = start + 1;
   }
 });
 
 form.addEventListener('submit', event => {
   event.preventDefault();
-  const html = md.render(markdownInput.value);
+  const html = md.render(markdownInput.value.replace(/\\\\/g, '\\'));
   htmlOutput.innerHTML = html;
 });
 
