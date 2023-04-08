@@ -11,10 +11,8 @@ body {
 .swiper-container {
   position: relative;
   overflow: hidden;
-  width: calc(100vw - 40px); /* 20px margin on both sides */
-  max-width: 630px;
-  height: calc(100vw - 40px); /* Same as width */
-  max-height: 630px;
+  width: calc(100vw);
+  height: calc(100vw);
   background-color: white;
 }
 
