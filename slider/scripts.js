@@ -29,4 +29,3 @@ function updateSlide() {
     slide.style.zIndex = index === currentIndex ? 1 : 0;
   });
 }
-
