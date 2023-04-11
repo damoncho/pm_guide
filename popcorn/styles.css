@@ -41,7 +41,11 @@ p {
 
 p.center {
     text-align: center;
-    text-align: justify;
+}
+
+p.notice {
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 p:last-child {
