@@ -5,6 +5,7 @@ body {
 }
 
 h2 {
+    font-size: 20px;
     line-height: 1.5;
 }
 
@@ -23,7 +24,8 @@ article {
     background-color: #25304A;
     padding: 2rem;
     line-height: 1.8;
-    border-radius: 16px;
+    border-radius: 7px;
+    margin: 0 15px;
 }
 
 hr {
@@ -34,10 +36,12 @@ hr {
 
 p {
     color: #98A4B7;
+    text-align: justify;
 }
 
 p.center {
     text-align: center;
+    text-align: justify;
 }
 
 p:last-child {
@@ -64,6 +68,4 @@ img {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 56px;
-    margin-bottom: 56px;
 }
