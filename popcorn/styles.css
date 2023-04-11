@@ -34,7 +34,7 @@ article {
     padding: 2rem;
     line-height: 1.8;
     border-radius: 7px;
-    margin: 0 15px;
+    margin: 0 15px 20px 15px;
 }
 
 hr {
@@ -53,7 +53,7 @@ p.center {
 }
 
 p.notice {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.5;
 }
 
@@ -61,6 +61,7 @@ p:last-child {
     margin-bottom: 0;
 }
 
+/*
 mark {
     color: #000;
     font-size: 14px;
@@ -69,7 +70,7 @@ mark {
     padding: 2px 4px;
     border-radius: 5px;
     text-align: center;
-}
+}*/
 
 
 img {
