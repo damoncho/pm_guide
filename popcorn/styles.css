@@ -4,7 +4,6 @@ body {
     color: #d4d9e1;
     background-color: #101322;
     font-size: 16px;
-    -webkit-text-size-adjust: 100%;
 }
 
 h2 {
@@ -54,7 +53,7 @@ p.center {
 }
 
 p.notice {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.5;
 }
 
@@ -64,10 +63,12 @@ p:last-child {
 
 mark {
     color: #000;
+    font-size: 14px;
     display: inline;
     background-color: #E8F1F5;
     padding: 2px 4px;
     border-radius: 5px;
+    text-align: center;
 }
 
 
