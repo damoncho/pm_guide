@@ -57,9 +57,10 @@ p.notice {
     line-height: 1.5;
 }
 
+/*
 p:last-child {
     margin-bottom: 0;
-}
+} */
 
 /*
 mark {
